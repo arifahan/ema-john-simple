@@ -1,11 +1,14 @@
 import './App.css';
 import Header from './components/Header/Header';
+import Product from './components/Products/Product';
+import Shop from './components/Shop/Shop';
 
 function App() {
   return (
     <div className='header-section'>
       <Header></Header>
-      <h1>Start from 34.5</h1>
+      <Shop></Shop>
+     
    </div>
   );
 }

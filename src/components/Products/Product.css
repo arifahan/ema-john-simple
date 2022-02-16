@@ -1,0 +1,22 @@
+.product{
+    display: flex;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.product-info {
+    padding-left: 20px;
+}
+.product-info h4 {
+    color: blue;
+}
+.product-info button {
+    background-color: rgb(247, 158, 41);
+    width: 200px;
+    height: 30px;
+    border: 1px solid rgb(161, 148, 148);
+    border-radius: 5px;
+    cursor: pointer;
+}
