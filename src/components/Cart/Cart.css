@@ -15,3 +15,7 @@
 .cart-summery strong {
     float: right;
 }
+.cart-summery {
+   position: sticky;
+   top: 0;
+}
