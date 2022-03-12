@@ -3,7 +3,7 @@ import { removeFromDatabaseCart } from '../../utilities/databaseManager';
 
 
 const Reviewitem = (props) => {
-    const {name, price, key, img, quantity} = props.cartProduct;
+    const {name, price, key, img, quantity} = props.product;
     const removeProduct = props.removeProduct;
     return (
         <div>

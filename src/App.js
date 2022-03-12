@@ -18,7 +18,7 @@ function App() {
   return (
     <div className='header-section'>
       <Header></Header>
-      <h1>38.3</h1>
+      <h1>38.5</h1>
       <Router>
         <Switch>
           <Route path="/shop">

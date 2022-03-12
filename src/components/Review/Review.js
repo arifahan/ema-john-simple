@@ -29,7 +29,7 @@ const Review = () => {
 <div className='shop-container'>
             <div className="product-container">
                     {
-                       cart.map(cartpd => <Reviewitem removeProduct={removeProduct} cartProduct ={cartpd} key={cartpd.key}></Reviewitem>)  
+                       cart.map(pd => <Reviewitem removeProduct={removeProduct} product ={pd} key={pd.key}></Reviewitem>)  
                     }
                     
             </div>

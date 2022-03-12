@@ -6,9 +6,9 @@ import './PhoductDetail.css'
 
 const ProductDetails = () => {
     const {productKey} = useParams()
-    const product = fakeData.find(pd => pd.key == productKey);
+    const product = fakeData.find(pd => pd.key === productKey);
     console.log(product);
-    const {name, seller, wholePrice, priceFraction, stock, img} = product;
+
     return (
         <div className="product-single">
             <h3>Product Details</h3>
