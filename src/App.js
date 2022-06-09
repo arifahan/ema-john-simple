@@ -13,23 +13,37 @@ import Review from './components/Review/Review';
 import Manage from './components/Manage/Manage';
 import Notfound from './components/Notfound/Notfound';
 import ProductDetails from './components/ProductDetail/ProductDetails';
+import Login from './components/Login/Login';
+import Shipment from './components/Shipment/Shipment';
+import { createContext, useState } from 'react';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
+
   return (
-    <div className='header-section'>
-      <Header></Header>
-      <h1>38.5</h1>
-      <Router>
-        <Switch>
+      <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+        <Router>  
+          <Header></Header>
+          <h1>{loggedInUser.email}42.19</h1>
+          <Switch>
           <Route path="/shop">
             <Shop></Shop>
           </Route>
           <Route path="/review">
             <Review></Review>
           </Route>
-          <Route path="/manage">
+          <PrivateRoute path="/manage">
             <Manage></Manage>
+          </PrivateRoute>
+          <Route path="/login">
+            <Login></Login>
           </Route>
+         <PrivateRoute path="/shipment">
+            <Shipment></Shipment>
+          </PrivateRoute>
           <Route exact path="/">
           <Shop></Shop>
           </Route>
@@ -40,8 +54,9 @@ function App() {
           <Notfound></Notfound>
           </Route>
         </Switch>
-      </Router>     
-   </div>
+      </Router>
+      </UserContext.Provider>
+ 
   );
 }
 
